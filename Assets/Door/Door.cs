@@ -10,6 +10,8 @@ public class Door : MonoBehaviour
 
     public bool closedByDefault = true;
 
+    private int activators;
+
     private void Start()
     {
         doorCollider = GetComponent<Collider2D>();
@@ -23,14 +25,22 @@ public class Door : MonoBehaviour
     {
         if (enter)
         {
-            doorCollider.enabled = !closedByDefault;
-            doorRenderer.enabled = !closedByDefault;
+            activators++;
         }
         if (!enter) // exit
         {
+            activators--;
+        }
+
+        if (activators <= 0)
+        {   // default state 
+            doorCollider.enabled = !closedByDefault;
+            doorRenderer.enabled = !closedByDefault;
+        } else { // at least one button is activation the door
             doorCollider.enabled = closedByDefault;
             doorRenderer.enabled = closedByDefault;
         }
+
     }
 
 }

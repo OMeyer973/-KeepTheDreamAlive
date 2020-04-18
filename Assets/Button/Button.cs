@@ -7,10 +7,10 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    
     // door this button will trigger
     public Door doorToTrigger;
     public TransporterColor color;
+    public bool stayActivated;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,6 +27,7 @@ public class Button : MonoBehaviour
     {
         Transporter transporter = other.GetComponent<Transporter>();
         // if colliding object is not a transporter : abort
+        if (stayActivated) return;
         if (transporter == null) return;
         // if wrong transporter color : abort
         if (color != TransporterColor.Both && transporter.color != color) return;
