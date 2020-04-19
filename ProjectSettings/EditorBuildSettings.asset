@@ -15,38 +15,38 @@ EditorBuildSettings:
     path: Assets/Scenes/VictoryScene.unity
     guid: a027012907803a145bb87e4875609b25
   - enabled: 1
-    path: Assets/Scenes/Level/DevSandBox.unity
-    guid: af186cd4c1dcfbf4ab541a0594f3096b
-  - enabled: 1
     path: Assets/Scenes/Level/Level_0.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Level/Level_1.unity
     guid: becbffe9319f0c04bae32e37e40ca725
   - enabled: 1
-    path: Assets/Scenes/Level/Level_95.unity
-    guid: 9a0e380d7f1e9c84e850a87f7d796905
-  - enabled: 1
     path: Assets/Scenes/Level/Level_2.unity
     guid: 11233e84d79e2cc4eb411eed7481b907
+  - enabled: 1
+    path: Assets/Scenes/Level/Level_3.unity
+    guid: 143e95c6c85b26e4ea65866b475fb2b1
   - enabled: 1
     path: Assets/Scenes/Level/Level_4.unity
     guid: 632ce3e1137108d44a09a16913a4896a
   - enabled: 1
-    path: Assets/Scenes/Level/Level_96.unity
+    path: Assets/Scenes/Level/Level_5.unity
+    guid: 9a0e380d7f1e9c84e850a87f7d796905
+  - enabled: 1
+    path: Assets/Scenes/Level/Level_6.unity
     guid: 1604ed516d684064dbf57d1414a5ca0a
   - enabled: 1
-    path: Assets/Scenes/Level/Level_97.unity
-    guid: 2eb4f0aed7f113d48a96c94844bb025b
+    path: Assets/Scenes/Level/Level_96.unity
+    guid: d00bb3db4ca411a43a4f231a630ec7d8
   - enabled: 1
-    path: Assets/Scenes/Level/Level_98.unity
-    guid: 3a826ee011b34174a88faea8c63bcde9
+    path: Assets/Scenes/Level/Level_95.unity
+    guid: 89a6930383e64b145aff28ffc3bf3e25
   - enabled: 1
-    path: Assets/Scenes/Level/Level_99.unity
-    guid: 2117b02f64dc2954b9a2bbf3d4a59804
+    path: Assets/Scenes/Level/Level_7.unity
+    guid: 43ad9295509687e44aead7ade2637bd9
   - enabled: 1
-    path: Assets/Scenes/Level/Level_100.unity
-    guid: 6484ee8a31407ce4cba888b864c38db2
+    path: Assets/Scenes/Level/DevSandBox.unity
+    guid: af186cd4c1dcfbf4ab541a0594f3096b
   - enabled: 0
     path: Assets/Scenes/Level/Test_LVL_D.unity
     guid: 00d92330dcabeac4c8e709b70af3ba96

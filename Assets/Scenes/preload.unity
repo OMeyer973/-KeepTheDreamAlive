@@ -832,11 +832,11 @@ MonoBehaviour:
   - Level_2
   - Level_3
   - Level_4
-  - Level_96
-  - Level_97
-  - Level_98
-  - Level_99
-  - Level_100
+  - Level_5
+  - Level_6
+  - Level_7
+  - Level_8
+  - Level_9
 --- !u!1 &476050855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,6 +2112,13 @@ MonoBehaviour:
     me up this tower to the princess who ordered me. move with the arrow keys.
   - 'Here''s a tip : press the left CTRL key to switch wo is in command. And keep
     me off the walls or I''l get a scratch !'
+  - Hey you probably don't want to fall into these holes right here
+  - Hey you probably don't want to fall into these holes right here
+  - Hey you probably don't want to fall into these holes right here
+  - Hey you probably don't want to fall into these holes right here
+  - Hey you probably don't want to fall into these holes right here
+  - Hey you probably don't want to fall into these holes right here
+  - Hey you probably don't want to fall into these holes right here
   - Hey you probably don't want to fall into these holes right here
 --- !u!1 &1663218278
 GameObject:
