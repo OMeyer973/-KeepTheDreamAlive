@@ -18,7 +18,13 @@ public class Game : MonoBehaviour
 {
     public static Game Instance { get; private set; }
 
-    public int nbLevels = 1;
+    [HideInInspector]
+    public int nbLevels {
+        get {
+            return levelSceneNames.Count;
+        }
+        private set { }
+    }
     private int currLevelID;
 
     public int mirrorMaxHp = 3;
