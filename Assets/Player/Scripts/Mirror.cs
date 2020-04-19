@@ -19,6 +19,7 @@ public class Mirror : MonoBehaviour
     {
         currHitPoints--;
         Debug.Log("mirror has been hit ! only " + currHitPoints + " left");
+        UI.Instance.UpdateMirrorUI(currHitPoints);
         if (currHitPoints <= 0)
         {
             Game.Instance.LoseLevel(LoseCondition.HitWall);

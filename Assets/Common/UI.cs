@@ -53,19 +53,44 @@ public class UI : MonoBehaviour
         MirrorSpeechOverlay.SetActive(true);
         PauseScreen.SetActive(false);
         LevelVictoryScreen.SetActive(false);
-        if (id <= Game.Instance.nbLevels)
+
+        WriteLevelAdvice(id);
+    }
+
+    public void WriteLevelAdvice (int id)
+    {
+        if (id >= Game.Instance.nbLevels)
         {
-            MirrorTextWriter.TypeText(levelAdvices[id]);
-        } else
+            Debug.LogError("trying to ontput a msg for a non existing level");
+            return;
+        }
+        if (id >= levelAdvices.Count)
         {
-            MirrorTextWriter.TypeText("This is the " + id +"th level, you do't need anymore advice now !");
+            MirrorTextWriter.TypeText("This is the " + id + "th level, you do't need anymore advice now !");
             Debug.Log("no advice provided for level " + id + " fallback on generic message");
         }
+        else
+        {
+            MirrorTextWriter.TypeText(levelAdvices[id]);
+        }
+
     }
 
     public void UpdateMirrorUI (int hitPointsLeft)
     {
-        MirrorTextWriter.TypeText("Hey be careful with these sharp angles ! if you dou that again yo''l break me !", .01f);
+        if (hitPointsLeft >= 3)
+        {
+            MirrorTextWriter.TypeText("Hey be careful with these sharp angles ! I don't want to catch any scratch !", .01f);
+            return;
+        }
+        if (hitPointsLeft == 2)
+        {
+            MirrorTextWriter.TypeText("Oh great, now I have cracks...", .01f);
+        }
+        if (hitPointsLeft == 1)
+        {
+            MirrorTextWriter.TypeText("Stop banging me against the walls you monsters ! I'm about to break !!", .01f);
+        }
         // todo msg
         // todo graphics
         // todo sound
