@@ -9,6 +9,8 @@ public class Game : MonoBehaviour
     public int nbLevels = 1;
     private int currLevelID;
 
+    public int mirrorMaxHp = 3;
+
     public float timeBetweenBrokenMirrorAndLevelReset = 3;
 
     void Awake()
@@ -111,7 +113,7 @@ public class Game : MonoBehaviour
 
     void LaunchLevel (int id)
     {
-        UI.Instance.LaunchLevel();
+        UI.Instance.LaunchLevel(id);
         LoadScene("Level_" + id);
     }
 }

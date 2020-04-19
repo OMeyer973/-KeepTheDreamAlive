@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Mirror : MonoBehaviour
 {
-    public static int maxHitPoints = 3;
-    private int currHitPoints = 3;
+    private int currHitPoints;
 
     public float minTimeBetweenDamage = 1;
     private bool canTakeDamage = true;
@@ -13,7 +12,7 @@ public class Mirror : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currHitPoints = maxHitPoints;   
+        currHitPoints = Game.Instance.mirrorMaxHp;   
     }
 
     private void TakeDamage()

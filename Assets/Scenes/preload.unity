@@ -594,7 +594,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &292449379
 Transform:
   m_ObjectHideFlags: 0
@@ -754,7 +754,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad83ce6af37cc84aaadb313b9b35aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbLevels: 1
+  nbLevels: 4
+  mirrorMaxHp: 3
   timeBetweenBrokenMirrorAndLevelReset: 3
 --- !u!1 &476050855
 GameObject:
@@ -1234,6 +1235,7 @@ GameObject:
   - component: {fileID: 1097069352}
   - component: {fileID: 1097069354}
   - component: {fileID: 1097069353}
+  - component: {fileID: 1097069355}
   m_Layer: 0
   m_Name: MirrorText
   m_TagString: Untagged
@@ -1291,7 +1293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: 'use the arow keys to navigate '
+  m_Text: 
 --- !u!222 &1097069354
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1300,6 +1302,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1097069351}
   m_CullTransparentMesh: 0
+--- !u!114 &1097069355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097069351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a39c76415dacd74196da3610ad3f50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  letterPause: 0.02
 --- !u!1 &1217508077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,10 +2022,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb8dbb2bfa78c8c4d9375842cf5ddafc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MirrorTextWriter: {fileID: 1097069355}
   SettingsScreen: {fileID: 292449378}
   MirrorSpeechOverlay: {fileID: 1893853565}
   PauseScreen: {fileID: 343883620}
   LevelVictoryScreen: {fileID: 189448745}
+  levelAdvices:
+  - Welcome to Your new mirror delivery job young lad. Your task is to bring me up
+    this tower to the princess who ordered me
+  - cc cv
 --- !u!1 &1663218278
 GameObject:
   m_ObjectHideFlags: 0
