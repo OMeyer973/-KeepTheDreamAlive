@@ -98,10 +98,12 @@ public class PlayerController : MonoBehaviour
         {
             transporterBlue.GetComponent<Transporter>().EndSteering();
             transporterRed.GetComponent<Transporter>().BeginSteering();
+            // todo sound tutut !
         } else
         {
             transporterBlue.GetComponent<Transporter>().BeginSteering();
             transporterRed.GetComponent<Transporter>().EndSteering();
+            // todo sound tut !
         }
     }
 }
