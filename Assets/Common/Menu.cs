@@ -1,13 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("for Menu scene & victory scene use only")]
+    public Text timesText;
+
+    private void Start()
     {
-        
+        if (timesText == null)
+        {
+            Debug.LogWarning("make sure to assign text fields for timesText");
+        }
+
+        updateMenuTimeTexts();
     }
 
     public void Play()
@@ -20,19 +28,20 @@ public class Menu : MonoBehaviour
         Game.Instance.GoToMenu();
     }
 
+    public void updateMenuTimeTexts()
+    {
+        string bestTimeText = Timer.Instance.getBestTimeString();
+        string lastCompleteTimeText = Timer.Instance.getLastCompleteTimeString();
+        timesText.text = "Best time:\n" + bestTimeText + "\nYour time:\n" + lastCompleteTimeText;
+    }
+
     public void Settings()
     {
         Game.Instance.GoToSettings();
     }
 
-    public void ResetGame ()
+    public void ResetGame()
     {
         Game.Instance.ResetGame();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

@@ -67,6 +67,7 @@ public class Game : MonoBehaviour
         UI.Instance.ShowPauseScreen();
         prevGameState = gameState;
         gameState = GameState.InAMenu;
+        Timer.Instance.PauseTimer();
         //todo stop time
     }
 
@@ -74,6 +75,7 @@ public class Game : MonoBehaviour
     {
         UI.Instance.HidePauseScreen();
         gameState = prevGameState;
+        Timer.Instance.UnpauseTimer();
         //todo stop time
     }
 
@@ -98,13 +100,16 @@ public class Game : MonoBehaviour
     // called when the player has reached the end of a level
     public void FinishLevel()
     {
-            gameState = GameState.InAMenu;
+        gameState = GameState.InAMenu;
         UI.Instance.ShowLevelVictoryScreen();
+        Timer.Instance.PauseTimer();
     }
 
     // load the current level (ie the first level at the first launch)
     public void LaunchCurrentLevel()
     {
+        if (currLevelID == 0) Timer.Instance.BeginTimer();
+        Timer.Instance.UnpauseTimer();
         LaunchLevel(currLevelID);
     }
 
@@ -114,12 +119,19 @@ public class Game : MonoBehaviour
         currLevelID++;
         if (currLevelID >= nbLevels)
         {
-            UI.Instance.HideAll();
-            LoadScene("VictoryScene");
+            FinishGame();
         } else
         {
             LaunchLevel(currLevelID);
         }
+    }
+
+    void FinishGame()
+    {
+        UI.Instance.HideAll();
+        LoadScene("VictoryScene");
+        Timer.Instance.PauseTimer();
+        Timer.Instance.saveTime();
     }
 
     // go back to the main menu
@@ -127,6 +139,7 @@ public class Game : MonoBehaviour
     {
         LoadScene("Menu");
         UI.Instance.HideAll();
+        Timer.Instance.PauseTimer();
     }
 
     public void ResetGame()
@@ -144,6 +157,7 @@ public class Game : MonoBehaviour
 
     void LaunchLevel (int id)
     {
+        Timer.Instance.UnpauseTimer();
         gameState = GameState.PlayingALevel;
         UI.Instance.LaunchLevel(id);
         LoadScene(levelSceneNames[id]);

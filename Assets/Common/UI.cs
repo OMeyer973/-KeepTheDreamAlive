@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
@@ -9,9 +10,11 @@ public class UI : MonoBehaviour
 
     [Header("UI Layers (this guy's children)")]
     public GameObject SettingsScreen;
-    public GameObject MirrorSpeechOverlay;
+    public GameObject InGameUI;
+    public Text InGameTimerText;
     public GameObject PauseScreen;
     public GameObject LevelVictoryScreen;
+
 
     public List<string> levelAdvices;
     void Awake()
@@ -32,7 +35,7 @@ public class UI : MonoBehaviour
         }
         /*
         SettingsScreen = transform.Find("SettingsScreen").gameObject;
-        MirrorSpeechOverlay = transform.Find("MirrorSpeechOverlay").gameObject;
+        InGameUI = transform.Find("InGameUI").gameObject;
         PauseScreen = transform.Find("PauseScreen").gameObject;
         LevelVictoryScreen = transform.Find("LevelVictoryScreen").gameObject;
         */
@@ -41,7 +44,7 @@ public class UI : MonoBehaviour
     public void HideAll()
     {
         SettingsScreen.SetActive(false);
-        MirrorSpeechOverlay.SetActive(false);
+        InGameUI.SetActive(false);
         PauseScreen.SetActive(false);
         LevelVictoryScreen.SetActive(false);
     }
@@ -50,11 +53,16 @@ public class UI : MonoBehaviour
     public void LaunchLevel(int id)
     {
         SettingsScreen.SetActive(false);
-        MirrorSpeechOverlay.SetActive(true);
+        InGameUI.SetActive(true);
         PauseScreen.SetActive(false);
         LevelVictoryScreen.SetActive(false);
 
         WriteLevelAdvice(id);
+    }
+
+    public void UpdateTimerDisplay(string currentTimeString)
+    {
+        InGameTimerText.text = currentTimeString;
     }
 
     public void WriteLevelAdvice (int id)
