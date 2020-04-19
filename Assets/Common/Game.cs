@@ -28,6 +28,8 @@ public class Game : MonoBehaviour
 
     private GameState prevGameState = GameState.InAMenu;
 
+    public List<string> levelSceneNames;
+
     void Awake()
     {
         if (Instance == null) { 
@@ -40,6 +42,13 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        levelSceneNames = new List<string>
+        {
+            "Level_0",
+            "Level_1",
+            "Level_2",
+            "Level_3"
+        };
         GoToMenu();
         //UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }
@@ -138,6 +147,6 @@ public class Game : MonoBehaviour
     {
         gameState = GameState.PlayingALevel;
         UI.Instance.LaunchLevel(id);
-        LoadScene("Level_" + id);
+        LoadScene(levelSceneNames[id]);
     }
 }
