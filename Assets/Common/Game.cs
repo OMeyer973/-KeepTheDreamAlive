@@ -42,13 +42,6 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        levelSceneNames = new List<string>
-        {
-            "Level_0",
-            "Level_1",
-            "Level_2",
-            "Level_3"
-        };
         GoToMenu();
         //UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
     }

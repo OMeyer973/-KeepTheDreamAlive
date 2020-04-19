@@ -25,15 +25,6 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-        levelAdvices = new List<string>
-            {
-            "Welcome to Your new mirror delivery job young lad. Your task is to bring me up this tower to the princess who ordered me",
-            "cc cv",
-            "b",
-            "c",
-            "c"
-        };
-
 
         if (levelAdvices.Count < Game.Instance.nbLevels)
         {
