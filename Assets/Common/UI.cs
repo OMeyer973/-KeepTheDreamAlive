@@ -56,6 +56,10 @@ public class UI : MonoBehaviour
         if (id <= Game.Instance.nbLevels)
         {
             MirrorTextWriter.TypeText(levelAdvices[id]);
+        } else
+        {
+            MirrorTextWriter.TypeText("This is the " + id +"th level, you do't need anymore advice now !");
+            Debug.Log("no advice provided for level " + id + " fallback on generic message");
         }
     }
 
