@@ -2,6 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum LoseCondition {
+    HitWall,
+    FellInHole
+}
+
+public enum GameState
+{
+    InAMenu,
+    PlayingALevel,
+    LostLevelAndAwaitingReload
+}
+
 public class Game : MonoBehaviour
 {
     public static Game Instance { get; private set; }
@@ -11,7 +23,10 @@ public class Game : MonoBehaviour
 
     public int mirrorMaxHp = 3;
 
-    public float timeBetweenBrokenMirrorAndLevelReset = 3;
+    public float timeBetweenLevelLostAndReset = 3;
+    public GameState gameState = GameState.InAMenu;
+
+    private GameState prevGameState = GameState.InAMenu;
 
     void Awake()
     {
@@ -42,24 +57,32 @@ public class Game : MonoBehaviour
     public void PauseGame()
     {
         UI.Instance.ShowPauseScreen();
+        prevGameState = gameState;
+        gameState = GameState.InAMenu;
         //todo stop time
     }
 
     public void UnpauseGame()
     {
         UI.Instance.HidePauseScreen();
+        gameState = prevGameState;
         //todo stop time
     }
 
-    public void LoseLevel()
+    public void LoseLevel(LoseCondition loseCondition)
     {
+        if (gameState == GameState.LostLevelAndAwaitingReload) return; // we're allready in a lose loop
+        
+        UI.Instance.showLostMessage(loseCondition);
+        gameState = GameState.LostLevelAndAwaitingReload;
         // show death msg
-        StartCoroutine(WaitAndResetCanTakeDamage());
+        StartCoroutine(WaitAndReloadLevel());
     }
 
-    IEnumerator WaitAndResetCanTakeDamage()
+    IEnumerator WaitAndReloadLevel()
     {
-        yield return new WaitForSeconds(timeBetweenBrokenMirrorAndLevelReset);
+        yield return new WaitForSeconds(timeBetweenLevelLostAndReset);
+        gameState = GameState.PlayingALevel;
         LaunchCurrentLevel();
 }
 
@@ -67,7 +90,7 @@ public class Game : MonoBehaviour
     // called when the player has reached the end of a level
     public void FinishLevel()
     {
-        // todo
+            gameState = GameState.InAMenu;
         UI.Instance.ShowLevelVictoryScreen();
     }
 
@@ -113,6 +136,7 @@ public class Game : MonoBehaviour
 
     void LaunchLevel (int id)
     {
+        gameState = GameState.PlayingALevel;
         UI.Instance.LaunchLevel(id);
         LoadScene("Level_" + id);
     }

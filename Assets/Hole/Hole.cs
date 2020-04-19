@@ -13,6 +13,6 @@ public class Hole : MonoBehaviour
             Debug.Log("something weird felt into a hole");
             return;
         }
-        Debug.Log("YOU LOSE [todo]");
+        Game.Instance.LoseLevel(LoseCondition.FellInHole);
     }
 }

@@ -16,7 +16,10 @@ public class UI : MonoBehaviour
     public string[] levelAdvices =
         {
         "Welcome to Your new mirror delivery job young lad. Your task is to bring me up this tower to the princess who ordered me",
-        "cc cv"
+        "cc cv",
+        "b",
+        "c",
+        "c"
     };
     void Awake()
     {
@@ -58,39 +61,62 @@ public class UI : MonoBehaviour
         LevelVictoryScreen.SetActive(false);
         if (id <= Game.Instance.nbLevels)
         {
+            Debug.Log(id + " ### " + Game.Instance.nbLevels);
             MirrorTextWriter.TypeText(levelAdvices[id]);
         }
     }
 
     public void UpdateMirrorUI (int hitPointsLeft)
     {
-        // todo
+        // todo msg
+        // todo graphics
+        // todo sound
+    }
+
+    public void showLostMessage(LoseCondition loseCondition)
+    {
+        switch(loseCondition)
+        {
+            case LoseCondition.FellInHole:
+                MirrorTextWriter.TypeText("Well you won't be able to deliver me if stay in that hole...", .01f);
+                break;
+            case LoseCondition.HitWall:
+                MirrorTextWriter.TypeText("Ouch broke me against that wall ! Be more careful next time !", .01f);
+                break;
+        }
+        // todo sound
+        // todo animate mirror portrait
     }
 
     public void ShowPauseScreen()
     {
         PauseScreen.SetActive(true);
+        // todo sound
     }
 
     public void HidePauseScreen()
     {
         PauseScreen.SetActive(false);
+        // todo sound
     }
 
     // display the UI when a level is won
     public void ShowLevelVictoryScreen ()
     {
         LevelVictoryScreen.SetActive(true);
+        // todo sound
     }
 
     public void ShowSettingsScreen()
     {
         SettingsScreen.SetActive(true);
+        // todo sound
     }
 
     public void HideSettingsScreen()
     {
         SettingsScreen.SetActive(false);
+        // todo sound
     }
 
 }

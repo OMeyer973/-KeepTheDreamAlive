@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Game.Instance.gameState != GameState.PlayingALevel) return;
+
         float directionSign = steeringRed ? 1 : - 1;
         Vector3 mirrorDirection = directionSign * (transporterRed.position - transporterBlue.position).normalized;
 
@@ -44,13 +46,11 @@ public class PlayerController : MonoBehaviour
         currRotationSpeed = Mathf.Lerp(currRotationSpeed, targetRotationAngle, deceleration);
         else currRotationSpeed = Mathf.Lerp(currRotationSpeed, targetRotationAngle, acceleration);
 
-
         Vector3 rotationPoint = steeringRed ? transporterBlue.position : transporterRed.position;
         Vector3 steeringPoint = steeringRed ? transporterRed.position : transporterBlue.position;
         transform.position += mirrorDirection * currWalkingSpeed * Time.fixedDeltaTime;
 
         transform.RotateAround(rotationPoint, Vector3.forward, currRotationSpeed * Time.fixedDeltaTime);
-
     }
 
     // Update is called once per frame (after built in physics)
