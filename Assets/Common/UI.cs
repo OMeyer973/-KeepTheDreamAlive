@@ -13,14 +13,7 @@ public class UI : MonoBehaviour
     public GameObject PauseScreen;
     public GameObject LevelVictoryScreen;
 
-    public string[] levelAdvices =
-        {
-        "Welcome to Your new mirror delivery job young lad. Your task is to bring me up this tower to the princess who ordered me",
-        "cc cv",
-        "b",
-        "c",
-        "c"
-    };
+    public List<string> levelAdvices;
     void Awake()
     {
         if (Instance == null) {
@@ -32,7 +25,17 @@ public class UI : MonoBehaviour
 
     private void Start()
     {
-        if (levelAdvices.Length < Game.Instance.nbLevels)
+        levelAdvices = new List<string>
+            {
+            "Welcome to Your new mirror delivery job young lad. Your task is to bring me up this tower to the princess who ordered me",
+            "cc cv",
+            "b",
+            "c",
+            "c"
+        };
+
+
+        if (levelAdvices.Count < Game.Instance.nbLevels)
         {
             Debug.LogWarning("Warning : there are less level advices than levels, will encounter array overflow at some point");
         }
@@ -61,7 +64,7 @@ public class UI : MonoBehaviour
         LevelVictoryScreen.SetActive(false);
         if (id <= Game.Instance.nbLevels)
         {
-            Debug.Log(id + " ### " + Game.Instance.nbLevels);
+            Debug.Log(id + " ### " + levelAdvices.Count + " ### " + Game.Instance.nbLevels);
             MirrorTextWriter.TypeText(levelAdvices[id]);
         }
     }
