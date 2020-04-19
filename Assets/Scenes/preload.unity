@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 452536419}
   - component: {fileID: 452536420}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameManage10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -828,6 +828,18 @@ MonoBehaviour:
   gameState: 0
   levelSceneNames:
   - Level_0
+  - Level_1
+  - Level_2
+  - Level_3
+  - Level_4
+  - Level_5
+  - Level_6
+  - Level_7
+  - Level_8
+  - Level_9
+  - Level_10
+  - Level_11
+  - Level_96
 --- !u!1 &468084096
 GameObject:
   m_ObjectHideFlags: 0
