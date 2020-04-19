@@ -4027,7 +4027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 10
-  rotationSpeed: 90
+  rotationOffset: 1
   acceleration: 0.5
   deceleration: 1
 --- !u!50 &1745182248
@@ -4930,6 +4930,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorToTrigger: {fileID: 1424759401}
   color: 0
+  stayActivated: 0
 --- !u!1001 &634185643119883368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4941,6 +4942,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mur_Bas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2696468692817666645, guid: d1c87affc4733364b8d1c28bf17dd809,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2913884755384021927, guid: d1c87affc4733364b8d1c28bf17dd809,
         type: 3}
@@ -4999,6 +5005,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1c87affc4733364b8d1c28bf17dd809, type: 3}
+--- !u!1001 &885440621856140001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7768844786463558950, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8521115657986838270, guid: 9eced11b120f18f4b9e181f350a4f7b3,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9eced11b120f18f4b9e181f350a4f7b3, type: 3}
 --- !u!1001 &984479557089917720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5066,6 +5141,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mur_CoinBD
       objectReference: {fileID: 0}
+    - target: {fileID: 7890233113569457269, guid: 10feea220c7b5f54ca15b4803f3e95af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10feea220c7b5f54ca15b4803f3e95af, type: 3}
 --- !u!1001 &1231428811617622234
@@ -5079,6 +5159,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mur_Gauche
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031748943544451046, guid: 7e5d26b2c28d51243b7db6ecece1aa43,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4014671540374935286, guid: 7e5d26b2c28d51243b7db6ecece1aa43,
         type: 3}
@@ -5204,6 +5289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mur_CoinHD
       objectReference: {fileID: 0}
+    - target: {fileID: 5431436170431064905, guid: 23b1d80536554db4384011c95acc0697,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23b1d80536554db4384011c95acc0697, type: 3}
 --- !u!1001 &1710467392364797443
@@ -5217,6 +5307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mur_Droit
+      objectReference: {fileID: 0}
+    - target: {fileID: 3346747499390950730, guid: fabc6e5455a4cbc46b30c703a396c2c9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6214229910654084653, guid: fabc6e5455a4cbc46b30c703a396c2c9,
         type: 3}
@@ -5287,6 +5382,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mur_CoinHG
       objectReference: {fileID: 0}
+    - target: {fileID: 1208260522547345541, guid: 5abe2ec2f11f27f4e86f755f734512d6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2469089553590275452, guid: 5abe2ec2f11f27f4e86f755f734512d6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5356,6 +5456,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mur_Haut
       objectReference: {fileID: 0}
+    - target: {fileID: 1081991532201405544, guid: 416d84cdd58726646b0c59bb94f3463a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6566935606226553815, guid: 416d84cdd58726646b0c59bb94f3463a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5424,6 +5529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mur_CoinBG
+      objectReference: {fileID: 0}
+    - target: {fileID: 5743057332415275963, guid: e07934710e94d68439ea055b4302cb0b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7869953630261586577, guid: e07934710e94d68439ea055b4302cb0b,
         type: 3}
