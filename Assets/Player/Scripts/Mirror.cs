@@ -18,7 +18,6 @@ public class Mirror : MonoBehaviour
     private void TakeDamage()
     {
         currHitPoints--;
-        Debug.Log("mirror has been hit ! only " + currHitPoints + " left");
         UI.Instance.UpdateMirrorUI(currHitPoints);
         if (currHitPoints <= 0)
         {
@@ -28,7 +27,6 @@ public class Mirror : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("mirror entered collision !!!!");
         if (canTakeDamage)
         {
             TakeDamage();

@@ -17,8 +17,7 @@ public class Door : MonoBehaviour
         doorCollider = GetComponent<Collider2D>();
         doorRenderer = GetComponent<Renderer>();
 
-        doorCollider.enabled = closedByDefault;
-        doorRenderer.enabled = closedByDefault;
+        DeactivateDoor();
     }
 
     public void toggleDoorBehavior(bool enter)
@@ -34,13 +33,25 @@ public class Door : MonoBehaviour
 
         if (activators <= 0)
         {   // default state 
-            doorCollider.enabled = !closedByDefault;
-            doorRenderer.enabled = !closedByDefault;
+            DeactivateDoor();
         } else { // at least one button is activation the door
-            doorCollider.enabled = closedByDefault;
-            doorRenderer.enabled = closedByDefault;
+            ActivateDoor();
         }
 
+    }
+
+    // activate the door (ie positive signal incoming)
+    private void ActivateDoor()
+    {
+        doorCollider.enabled = !closedByDefault;
+        doorRenderer.enabled = !closedByDefault;
+    }
+
+    // deactivate the door (ie negative signal incoming)
+    private void DeactivateDoor()
+    {
+        doorCollider.enabled = closedByDefault;
+        doorRenderer.enabled = closedByDefault;
     }
 
 }
