@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         if (transporterRed.name != "TransporterRed") Debug.Log("Player child 0 must be TransporterRed");
         transporterBlue = transform.GetChild(1);
         if (transporterBlue.name != "TransporterBlue") Debug.Log("Player child 1 must be TransporterBlue");
+        transporterBlue.GetComponent<Transporter>().BeginSteering();
     }
 
     void FixedUpdate()
@@ -56,6 +57,20 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame (after built in physics)
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1")) steeringRed = !steeringRed;
+        if (Input.GetButtonDown("Fire1")) ChangeSteering();
+    }
+
+    private void ChangeSteering()
+    {
+        steeringRed = !steeringRed;
+        if (steeringRed)
+        {
+            transporterBlue.GetComponent<Transporter>().EndSteering();
+            transporterRed.GetComponent<Transporter>().BeginSteering();
+        } else
+        {
+            transporterBlue.GetComponent<Transporter>().BeginSteering();
+            transporterRed.GetComponent<Transporter>().EndSteering();
+        }
     }
 }

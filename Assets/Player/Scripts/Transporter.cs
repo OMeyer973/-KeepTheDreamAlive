@@ -9,15 +9,20 @@ public enum TransporterColor
 public class Transporter : MonoBehaviour
 {
     public TransporterColor color;
-    // Start is called before the first frame update
-    void Start()
+    private GameObject transporterUI;
+
+    private void Start()
     {
-        
+        transporterUI = transform.GetChild(0).gameObject;
+        transporterUI.SetActive(false);
+    }
+    public void BeginSteering()
+    {
+        transporterUI.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EndSteering()
     {
-        
+        transporterUI.SetActive(false);
     }
 }
