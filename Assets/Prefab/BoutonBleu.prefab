@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0e890f0ebaf2fa24c951b60c5a2930ab, type: 2}
+  - {fileID: 2100000, guid: 1b5d63827b95a66458c7093d62bb0e1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -121,4 +121,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorToTrigger: {fileID: 0}
   color: 1
-  isActivated: 0
+  stayActivated: 0

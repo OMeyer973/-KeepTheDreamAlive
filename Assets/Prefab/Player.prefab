@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 10
-  rotationSpeed: 90
+  rotationSpeed: 120
   acceleration: 0.5
   deceleration: 1
 --- !u!58 &3398203977042923982
