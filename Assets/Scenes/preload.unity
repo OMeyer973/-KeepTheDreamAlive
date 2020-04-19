@@ -754,13 +754,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad83ce6af37cc84aaadb313b9b35aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbLevels: 2
+  nbLevels: 3
   mirrorMaxHp: 3
   timeBetweenLevelLostAndReset: 3
   gameState: 0
   levelSceneNames:
   - Level_0
   - Level_1
+  - Level_2
 --- !u!1 &476050855
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2035,7 @@ MonoBehaviour:
   levelAdvices:
   - Welcome to Your new mirror delivery job young lad. Your task is to bring me up
     this tower to the princess who ordered me
+  - Becareful to not break me boys !
   - Becareful to not break me boys !
 --- !u!1 &1663218278
 GameObject:
