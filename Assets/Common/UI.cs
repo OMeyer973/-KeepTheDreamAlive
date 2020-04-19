@@ -55,13 +55,13 @@ public class UI : MonoBehaviour
         LevelVictoryScreen.SetActive(false);
         if (id <= Game.Instance.nbLevels)
         {
-            Debug.Log(id + " ### " + levelAdvices.Count + " ### " + Game.Instance.nbLevels);
             MirrorTextWriter.TypeText(levelAdvices[id]);
         }
     }
 
     public void UpdateMirrorUI (int hitPointsLeft)
     {
+        MirrorTextWriter.TypeText("Hey be careful with these sharp angles ! if you dou that again yo''l break me !", .01f);
         // todo msg
         // todo graphics
         // todo sound

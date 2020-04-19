@@ -27,6 +27,7 @@ public class Mirror : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log("mirror entered collision !!!!");
         if (canTakeDamage)
         {
             TakeDamage();
