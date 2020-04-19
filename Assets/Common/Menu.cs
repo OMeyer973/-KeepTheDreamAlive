@@ -25,6 +25,11 @@ public class Menu : MonoBehaviour
         Game.Instance.GoToSettings();
     }
 
+    public void ResetGame ()
+    {
+        Game.Instance.ResetGame();
+    }
+
     // Update is called once per frame
     void Update()
     {

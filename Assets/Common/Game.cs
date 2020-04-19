@@ -9,6 +9,8 @@ public class Game : MonoBehaviour
     public int nbLevels = 1;
     private int currLevelID;
 
+    public float timeBetweenBrokenMirrorAndLevelReset = 3;
+
     void Awake()
     {
         if (Instance == null) { 
@@ -47,6 +49,18 @@ public class Game : MonoBehaviour
         //todo stop time
     }
 
+    public void LoseLevel()
+    {
+        // show death msg
+        StartCoroutine(WaitAndResetCanTakeDamage());
+    }
+
+    IEnumerator WaitAndResetCanTakeDamage()
+    {
+        yield return new WaitForSeconds(timeBetweenBrokenMirrorAndLevelReset);
+        LaunchCurrentLevel();
+}
+
     // show the level win card  (w ui to go to menu, go to next level...)
     // called when the player has reached the end of a level
     public void FinishLevel()
@@ -80,6 +94,12 @@ public class Game : MonoBehaviour
     {
         LoadScene("Menu");
         UI.Instance.HideAll();
+    }
+
+    public void ResetGame()
+    {
+        currLevelID = 0;
+        GoToMenu();
     }
 
 

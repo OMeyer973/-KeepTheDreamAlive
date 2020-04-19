@@ -47,7 +47,10 @@ public class UI : MonoBehaviour
         LevelVictoryScreen.SetActive(false);
     }
 
-
+    public void UpdateMirrorUI (int hitPointsLeft)
+    {
+        // todo
+    }
 
     public void ShowPauseScreen()
     {
