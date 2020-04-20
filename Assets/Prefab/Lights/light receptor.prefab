@@ -50,8 +50,8 @@ MonoBehaviour:
   color: 0
   buttonType: 0
   timer: 10
-  disabledGraphic: {fileID: 0}
-  enabledGraphic: {fileID: 0}
+  disabledGraphic: {fileID: 2225530803957138825}
+  enabledGraphic: {fileID: 3177939817500993311}
   invertSignal: 0
 --- !u!61 &6330835064129760034
 BoxCollider2D:
@@ -96,7 +96,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5192950911798808650
 Transform:
   m_ObjectHideFlags: 0
@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 7850035981997040444}
   - component: {fileID: 7079606600250323025}
   m_Layer: 0
-  m_Name: light receptor_Eteins (1)
+  m_Name: light receptor_Allume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
