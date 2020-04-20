@@ -13,11 +13,14 @@ public class UI : MonoBehaviour
     public GameObject InGameUI;
     public Text InGameLevelNameText;
     public Text InGameTimerText;
+    public GameObject InGameMirrorPanel;
+    private List<Image> mirrorImages;
     public GameObject PauseScreen;
     public GameObject LevelVictoryScreen;
 
 
     public List<string> levelAdvices;
+
     void Awake()
     {
         if (Instance == null) {
@@ -34,6 +37,9 @@ public class UI : MonoBehaviour
         {
             Debug.LogWarning("Warning : there are less level advices than levels, will encounter array overflow at some point");
         }
+
+        mirrorImages = new List<Image> (InGameMirrorPanel.transform.GetComponentsInChildren<Image>());
+
         /*
         SettingsScreen = transform.Find("SettingsScreen").gameObject;
         InGameUI = transform.Find("InGameUI").gameObject;
@@ -59,6 +65,7 @@ public class UI : MonoBehaviour
         LevelVictoryScreen.SetActive(false);
 
         InGameLevelNameText.text = "Room " + (id + 1);
+        setMirrorImage(Game.Instance.mirrorMaxHp);
         WriteLevelAdvice(id);
     }
 
@@ -88,33 +95,48 @@ public class UI : MonoBehaviour
 
     public void UpdateMirrorUI (int hitPointsLeft)
     {
-        if (hitPointsLeft >= 3)
-        {
-            MirrorTextWriter.TypeText("Hey be careful with these sharp angles ! I don't want to catch any scratch !", .01f);
-            return;
-        }
         if (hitPointsLeft == 2)
         {
-            MirrorTextWriter.TypeText("Oh great, now I have cracks...", .01f);
+            MirrorTextWriter.TypeText("Hey Be careful, you scratched me !", .005f);
         }
         if (hitPointsLeft == 1)
         {
-            MirrorTextWriter.TypeText("Stop banging me against the walls you monsters ! I'm about to break !!", .01f);
+            MirrorTextWriter.TypeText("Ouch ! I'm about to break !!", .005f);
         }
-        // todo msg
+        if (hitPointsLeft == 0)
+        {
+            MirrorTextWriter.TypeText("...", 0);
+        }
+
+        setMirrorImage(hitPointsLeft);
+
         // todo graphics
         // todo sound
     }
 
+    private void setMirrorImage (int hitPointsLeft)
+    {
+        for (int i = 0; i < mirrorImages.Count; i++)
+        {
+            if (i == hitPointsLeft)
+            { // show image
+                mirrorImages[i].color = new Color(1, 1, 1, 1);
+            }
+            else
+            {// hide image
+                mirrorImages[i].color = new Color(1, 1, 1, 0);
+            }
+        }
+    }
     public void showLostMessage(LoseCondition loseCondition)
     {
         switch(loseCondition)
         {
             case LoseCondition.FellInHole:
-                MirrorTextWriter.TypeText("Well you won't be able to deliver me if stay in that hole...", .01f);
+                MirrorTextWriter.TypeText("Get out of that hole...", 0);
                 break;
             case LoseCondition.HitWall:
-                MirrorTextWriter.TypeText("Ouch broke me against that wall ! Be more careful next time !", .01f);
+                MirrorTextWriter.TypeText("7 years of bad luck", 0);
                 break;
         }
         // todo sound
