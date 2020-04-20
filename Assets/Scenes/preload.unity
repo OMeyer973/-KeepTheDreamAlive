@@ -905,17 +905,20 @@ MonoBehaviour:
   timeBetweenLevelLostAndReset: 3
   gameState: 1
   levelSceneNames:
-  - 98
+  - Level_0
   - Level_1
   - Level_2
   - Level_3
   - Level_5
   - Level_13
   - 97
+  - Level_10
   - Level_6
+  - 98
   - Level_12
   - Level_7
   - Level_14
+  - Level_100
   - Level_4
   - Level_9
   - Level_11
