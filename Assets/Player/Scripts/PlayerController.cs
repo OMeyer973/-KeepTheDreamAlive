@@ -21,11 +21,15 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (Game.Instance != null) Debug.LogWarning("Game instance not found, please launch game from preload scene");
+
         transporterRed = transform.GetChild(0);
         if (transporterRed.name != "TransporterRed") Debug.Log("Player child 0 must be TransporterRed");
         transporterBlue = transform.GetChild(1);
         if (transporterBlue.name != "TransporterBlue") Debug.Log("Player child 1 must be TransporterBlue");
+
         transporterBlue.GetComponent<Transporter>().BeginSteering();
+
         currSpeed = new Vector2(0, 0);
     }
 

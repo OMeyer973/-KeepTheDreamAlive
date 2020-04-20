@@ -26,5 +26,9 @@ public class LightBeamSource : MonoBehaviour
         {
             lr.SetPosition(i + 1, lightRay.endPoints[i]);
         }
+        foreach (GameObject touchedObject in lightRay.touchedObjects)
+        {
+
+        }
     }
 }
