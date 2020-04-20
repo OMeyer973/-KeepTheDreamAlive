@@ -27,7 +27,10 @@ public abstract class DoorActivator : MonoBehaviour
         if (activated) return;
         activated = true;
         doorToTrigger.toggleDoorBehavior(!invertSignal);
-        StopCoroutine(waitAndReleaseCoroutine);
+        if (waitAndReleaseCoroutine != null)
+        {
+            StopCoroutine(waitAndReleaseCoroutine);
+        }
         Debug.Log("button / light receiver activated !");
         // todo graphics
         // todo sound
