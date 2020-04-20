@@ -12,7 +12,7 @@ public class MagicMirror : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currHitPoints = Game.Instance.mirrorMaxHp;   
+        currHitPoints = Game.Instance.mirrorMaxHp;
     }
 
     private void TakeDamage()

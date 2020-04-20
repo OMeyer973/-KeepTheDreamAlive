@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &27833695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,7 +716,7 @@ PrefabInstance:
     - target: {fileID: 3398203977042923969, guid: 4899f5d8a50767c4fa06169ee5871e79,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3398203977042923970, guid: 4899f5d8a50767c4fa06169ee5871e79,
         type: 3}
@@ -1071,6 +1071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angle: 0
+  lr: {fileID: 0}
 --- !u!120 &636574685
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1194,6 +1195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7d393ed92f8db47b45d7cfc2a3aa60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  layerMask: 0
 --- !u!1 &652670749
 GameObject:
   m_ObjectHideFlags: 0

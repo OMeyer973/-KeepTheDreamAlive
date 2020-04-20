@@ -2,46 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public enum ButtonType
+public class Button : DoorActivator
 {
-    instantaneous,
-    persistant,
-    wihTimer
-}
-public class Button : MonoBehaviour
-{
-    // door this button will trigger
-    public Door doorToTrigger;
-    public TransporterColor color;
-    public ButtonType buttonType;
-    public float timer = 10f;
-
-    public bool invertSignal;
-
-    private bool activated = false;
-
-    private void PressButton()
-    {
-        // button allready activated
-        if (activated) return;
-        activated = true;
-        doorToTrigger.toggleDoorBehavior(!invertSignal);
-    }
-    private void ReleaseButton()
-    {
-        // button allready deactivated
-        if (!activated) return;
-        if (buttonType == ButtonType.persistant) return;
-
-        activated = false;
-        doorToTrigger.toggleDoorBehavior(invertSignal);
-    }
-    private IEnumerator ReleaseButtonAfterTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-        ReleaseButton();
-    }
+    // see DoorActivator for parameters
     private void OnTriggerEnter2D(Collider2D other)
     {
         Transporter transporter = other.GetComponent<Transporter>();
@@ -62,11 +25,10 @@ public class Button : MonoBehaviour
 
         if (buttonType == ButtonType.wihTimer)
         {
-            StartCoroutine(ReleaseButtonAfterTime(timer));
+            ReleaseButtonAfterTimer();
             return;
         }
 
         ReleaseButton();
     }
-
 }

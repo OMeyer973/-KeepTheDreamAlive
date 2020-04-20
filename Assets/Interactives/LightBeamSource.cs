@@ -26,9 +26,14 @@ public class LightBeamSource : MonoBehaviour
         {
             lr.SetPosition(i + 1, lightRay.endPoints[i]);
         }
+
         foreach (GameObject touchedObject in lightRay.touchedObjects)
         {
-
+            LightBeamReceptor receptor = touchedObject.GetComponent<LightBeamReceptor>();
+            if (receptor != null)
+            {
+                receptor.BeginReceivingLight(this);
+            }
         }
     }
 }
