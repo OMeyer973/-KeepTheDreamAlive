@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3496331957761784652}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.25, y: 3, z: 25.06384}
+  m_LocalPosition: {x: 0, y: 0, z: -0.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -121,4 +121,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   doorToTrigger: {fileID: 0}
   color: 0
-  stayActivated: 0
+  buttonType: 0
+  timer: 10
+  invertSignal: 0

@@ -2773,7 +2773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doorType: 1
-  closedByDefault: 0
+  closedByDefault: 1
   numberOfSignalsToActivate: 2
 --- !u!23 &927480012
 MeshRenderer:
