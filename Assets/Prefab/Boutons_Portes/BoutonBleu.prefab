@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1843321229567058344}
   - component: {fileID: 1843321229567058325}
   - component: {fileID: 1843321229567058324}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BoutonBleu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7790074583746772612}
   - component: {fileID: 1514117809688325741}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BluePowerLineOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 6142502115317790861}
   - component: {fileID: 2903655231739903912}
   - component: {fileID: 4612511083582666566}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: "BoutonBleuEnfonc\xE9"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -398,7 +398,7 @@ GameObject:
   - component: {fileID: 2992134879461151326}
   - component: {fileID: 7768342813741614688}
   - component: {fileID: 5706499062544697909}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BoutonBleuNormal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -573,7 +573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5872166891062195339}
   - component: {fileID: 2648015388872245135}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BluePowerLineOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}

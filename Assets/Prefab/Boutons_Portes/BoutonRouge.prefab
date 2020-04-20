@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3496331957761784651}
   - component: {fileID: 3496331957761784654}
   - component: {fileID: 3496331957761784655}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BoutonRouge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 2345380074970924791}
   - component: {fileID: 6668941437424008243}
   - component: {fileID: 2230191335926045283}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BoutonRouge_Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 5473393928934881565}
   - component: {fileID: 7849691870692189687}
   - component: {fileID: 6648069454515215606}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BoutonRouge_Enfonce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
