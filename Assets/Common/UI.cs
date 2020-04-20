@@ -11,6 +11,7 @@ public class UI : MonoBehaviour
     [Header("UI Layers (this guy's children)")]
     public GameObject SettingsScreen;
     public GameObject InGameUI;
+    public Text InGameLevelNameText;
     public Text InGameTimerText;
     public GameObject PauseScreen;
     public GameObject LevelVictoryScreen;
@@ -57,6 +58,7 @@ public class UI : MonoBehaviour
         PauseScreen.SetActive(false);
         LevelVictoryScreen.SetActive(false);
 
+        InGameLevelNameText.text = "Room " + (id + 1);
         WriteLevelAdvice(id);
     }
 

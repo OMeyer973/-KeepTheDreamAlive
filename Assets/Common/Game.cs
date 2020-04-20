@@ -18,6 +18,8 @@ public class Game : MonoBehaviour
 {
     public static Game Instance { get; private set; }
 
+    public bool skipIntro = false;
+
     [HideInInspector]
     public int nbLevels {
         get {
@@ -48,8 +50,13 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GoToMenu();
-        //UnityEngine.SceneManagement.SceneManager.LoadScene("Menu");
+        if (skipIntro)
+        {
+            GoToMenu();
+        } else
+        {
+            LaunchIntro();
+        }
     }
 
     public void GoToSettings()
@@ -132,6 +139,14 @@ public class Game : MonoBehaviour
         LoadScene("VictoryScene");
         Timer.Instance.PauseTimer();
         Timer.Instance.saveTime();
+    }
+
+    // play the intro sequence
+    public void LaunchIntro()
+    {
+        LoadScene("Intro");
+        UI.Instance.HideAll();
+        Timer.Instance.PauseTimer();
     }
 
     // go back to the main menu
