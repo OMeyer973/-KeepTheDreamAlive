@@ -11,21 +11,21 @@ public enum DoorType
 
 public class Door : MonoBehaviour
 {
-
-    private Collider2D doorCollider;
-    private Renderer doorRenderer;
-
     public DoorType doorType;
     public bool closedByDefault = true;
 
     public int numberOfSignalsToActivate = 1;
     private int activators;
 
+    [Header("gameobjects a activer pour afficher l'état enclenché ou non du bouton")]
+
+    [Header("! doit être différent du gameobject qui porte ce script ! (un de ses enfant par exemple)")]
+
+    public GameObject closedDoor;
+    public GameObject openDoor;
+
     private void Start()
     {
-        doorCollider = GetComponent<Collider2D>();
-        doorRenderer = GetComponent<Renderer>();
-
         Init();
         activators = -numberOfSignalsToActivate;
     }
@@ -53,23 +53,25 @@ public class Door : MonoBehaviour
     // deactivate the door (ie negative signal incoming)
     private void Init()
     {
-        doorCollider.enabled = closedByDefault;
-        doorRenderer.enabled = closedByDefault;
+        closedDoor.SetActive(closedByDefault);
+        openDoor.SetActive(!closedByDefault);
     }
 
     // activate the door (ie positive signal incoming)
     private void ActivateDoor()
     {
-        doorCollider.enabled = !closedByDefault;
-        doorRenderer.enabled = !closedByDefault;
+
+        closedDoor.SetActive(!closedByDefault);
+        openDoor.SetActive(closedByDefault);
     }
 
     private void DeactivateDoor()
     {
         // if persistant : never deactivated
         if (doorType == DoorType.persistant) return;
-        doorCollider.enabled = closedByDefault;
-        doorRenderer.enabled = closedByDefault;
+
+        closedDoor.SetActive(closedByDefault);
+        openDoor.SetActive(!closedByDefault);
     }
 
 }
