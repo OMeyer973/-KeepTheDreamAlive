@@ -13,8 +13,7 @@ public class UI : MonoBehaviour
     public GameObject InGameUI;
     public Text InGameLevelNameText;
     public Text InGameTimerText;
-    public GameObject InGameMirrorPanel;
-    private List<Image> mirrorImages;
+    public List<Image> mirrorImages;
     public GameObject PauseScreen;
     public GameObject LevelVictoryScreen;
 
@@ -37,8 +36,6 @@ public class UI : MonoBehaviour
         {
             Debug.LogWarning("Warning : there are less level advices than levels, will encounter array overflow at some point");
         }
-
-        mirrorImages = new List<Image> (InGameMirrorPanel.transform.GetComponentsInChildren<Image>());
 
         /*
         SettingsScreen = transform.Find("SettingsScreen").gameObject;
