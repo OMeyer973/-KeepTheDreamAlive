@@ -569,7 +569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691766862}
   m_LocalRotation: {x: -0, y: -0, z: -0.021429617, w: 0.99977034}
-  m_LocalPosition: {x: -6.88, y: 0.42, z: -3.65}
+  m_LocalPosition: {x: -6.68, y: 0.41, z: -2.8}
   m_LocalScale: {x: 12.8, y: 7.2000003, z: 10}
   m_Children: []
   m_Father: {fileID: 122947623}
@@ -683,7 +683,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832684771}
   m_LocalRotation: {x: -0, y: -0, z: -0.021429617, w: 0.99977034}
-  m_LocalPosition: {x: -6.9, y: 0, z: -2.78}
+  m_LocalPosition: {x: -7.39, y: -0.01, z: -1.71}
   m_LocalScale: {x: 12.8, y: 7.2000003, z: 10}
   m_Children: []
   m_Father: {fileID: 837848615}
@@ -740,7 +740,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d50e894612cb53b4ba176186a31551fa, type: 2}
+  - {fileID: 2100000, guid: 4caef2f7b5795f64ea990270152caa0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1110,7 +1110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168817219}
   m_LocalRotation: {x: -0, y: -0, z: 0.018761232, w: 0.99982405}
-  m_LocalPosition: {x: -4.66, y: -0.52, z: -3.41}
+  m_LocalPosition: {x: -5.39, y: -0.5, z: -0.29}
   m_LocalScale: {x: 12.800002, y: 7.2000017, z: 10}
   m_Children: []
   m_Father: {fileID: 352703545}
@@ -1167,7 +1167,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 44a630abd3a136d4790582c017bc50b7, type: 2}
+  - {fileID: 2100000, guid: dc5031e3306422442882f609577b9f4c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1224,7 +1224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414312228}
   m_LocalRotation: {x: -0, y: -0, z: 0.011344416, w: 0.9999357}
-  m_LocalPosition: {x: -8.18, y: -0.16, z: -1.31}
+  m_LocalPosition: {x: -4.91, y: -0.06, z: -0.72}
   m_LocalScale: {x: 12.8, y: 7.2000003, z: 10}
   m_Children: []
   m_Father: {fileID: 868880552}
@@ -1281,7 +1281,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d5cef26256901754b9bf3bcf403ac8f8, type: 2}
+  - {fileID: 2100000, guid: e57655c8faabb0246983be2d085814d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1507,7 +1507,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1684454341}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.25, y: -0, z: -1.59}
+  m_LocalPosition: {x: -7.04, y: -0.01, z: -1.15}
   m_LocalScale: {x: 12.8, y: 7.2, z: 10}
   m_Children: []
   m_Father: {fileID: 574011598}
@@ -1564,7 +1564,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f504742b73012fd4db4c4dd55e2976c8, type: 2}
+  - {fileID: 2100000, guid: 259b8dee11599c34ab34594b3d50e109, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1661,18 +1661,18 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 7424304822904707844, guid: 1ae21e9ceb9a06441b0bc126e65f706b, type: 2}
     value: {fileID: 0}
-  - key: {fileID: -6412550095026069280, guid: 1ae21e9ceb9a06441b0bc126e65f706b, type: 2}
-    value: {fileID: 0}
   - key: {fileID: 3748164411798437727, guid: 1ae21e9ceb9a06441b0bc126e65f706b, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 837848616}
   - key: {fileID: -5220825561708659077, guid: 1ae21e9ceb9a06441b0bc126e65f706b, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 574011599}
   - key: {fileID: 228304778828834338, guid: 1ae21e9ceb9a06441b0bc126e65f706b, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 868880553}
   - key: {fileID: 4549371545519595135, guid: 1ae21e9ceb9a06441b0bc126e65f706b, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 352703546}
   - key: {fileID: 4099717858668538491, guid: 1ae21e9ceb9a06441b0bc126e65f706b, type: 2}
-    value: {fileID: 0}
+    value: {fileID: 833249404}
+  - key: {fileID: -894226143720022214, guid: 1ae21e9ceb9a06441b0bc126e65f706b, type: 2}
+    value: {fileID: 122947624}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1935569124
@@ -1701,7 +1701,7 @@ GameObject:
   - component: {fileID: 2067557226}
   - component: {fileID: 2067557225}
   m_Layer: 5
-  m_Name: Victory
+  m_Name: VictoryText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1757,7 +1757,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: "You delivered all the mirrors \nto the Princesses.\nCongratulations !"
+  m_Text: 'Thanks to you the princess
+
+    can now shine of her true beauty,
+
+    Congratulations
+    !'
 --- !u!222 &2067557226
 CanvasRenderer:
   m_ObjectHideFlags: 0
