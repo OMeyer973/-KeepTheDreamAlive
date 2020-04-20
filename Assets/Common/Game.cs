@@ -59,6 +59,15 @@ public class Game : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (gameState == GameState.PlayingALevel && Input.GetButtonDown("Fire2"))
+        {
+            PauseGame();
+        }
+    }
+
+
     public void GoToSettings()
     {
         UI.Instance.ShowSettingsScreen();
