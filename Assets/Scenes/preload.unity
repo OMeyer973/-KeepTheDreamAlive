@@ -1739,7 +1739,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 459481146a785c74cb504978d3e8d774, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a70de74ae8c68640b88ec3f949b829e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2236,7 +2236,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2a70de74ae8c68640b88ec3f949b829e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 459481146a785c74cb504978d3e8d774, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2634,7 +2634,11 @@ MonoBehaviour:
   InGameUI: {fileID: 1893853565}
   InGameLevelNameText: {fileID: 113670854}
   InGameTimerText: {fileID: 468084098}
-  InGameMirrorPanel: {fileID: 586095499}
+  mirrorImages:
+  - {fileID: 8075218}
+  - {fileID: 1244870093}
+  - {fileID: 964685039}
+  - {fileID: 1036783715}
   PauseScreen: {fileID: 343883620}
   LevelVictoryScreen: {fileID: 189448745}
   levelAdvices:
