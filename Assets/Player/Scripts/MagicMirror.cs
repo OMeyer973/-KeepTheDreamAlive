@@ -9,6 +9,9 @@ public class MagicMirror : MonoBehaviour
     public float minTimeBetweenDamage = 1;
     private bool canTakeDamage = true;
 
+    public AudioSource damageSound;
+    public AudioSource brokenSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +25,10 @@ public class MagicMirror : MonoBehaviour
     {
         currHitPoints--;
         UI.Instance.UpdateMirrorUI(currHitPoints);
+        damageSound.PlayOneShot(damageSound.clip);
         if (currHitPoints <= 0)
         {
+            brokenSound.PlayOneShot(brokenSound.clip);
             Game.Instance.LoseLevel(LoseCondition.HitWall);
         }
     }
