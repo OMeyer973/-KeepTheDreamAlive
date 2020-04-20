@@ -10,6 +10,7 @@ public class Transporter : MonoBehaviour
 {
     public TransporterColor color;
     private GameObject transporterUI;
+    private AudioSource holeFallSFX;
 
     private void Start()
     {
@@ -24,5 +25,12 @@ public class Transporter : MonoBehaviour
     public void EndSteering()
     {
         transporterUI.SetActive(false);
+    }
+
+    public void FallInHole()
+    {
+        holeFallSFX.PlayOneShot(holeFallSFX.clip);
+        Game.Instance.LoseLevel(LoseCondition.FellInHole);
+        gameObject.SetActive(false);
     }
 }

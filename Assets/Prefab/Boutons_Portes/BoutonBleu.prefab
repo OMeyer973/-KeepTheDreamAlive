@@ -76,8 +76,8 @@ MonoBehaviour:
   color: 1
   buttonType: 0
   timer: 10
-  disabledGraphic: {fileID: 5154783774971095538}
-  enabledGraphic: {fileID: 5942404225238405713}
+  disabledGraphic: {fileID: 5942404225238405713}
+  enabledGraphic: {fileID: 5154783774971095538}
   invertSignal: 0
 --- !u!1 &4982187129684777679
 GameObject:
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 2903655231739903912}
   - component: {fileID: 4612511083582666566}
   m_Layer: 2
-  m_Name: "BoutonBleuEnfonc\xE9"
+  m_Name: BoutonBleuEnfonce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
