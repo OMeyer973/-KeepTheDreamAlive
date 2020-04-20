@@ -110,6 +110,7 @@ public class Game : MonoBehaviour
         gameState = GameState.InAMenu;
         UI.Instance.ShowLevelVictoryScreen();
         Timer.Instance.PauseTimer();
+        Sound.Instance.PauseInGameMusic();
     }
 
     // load the current level (ie the first level at the first launch)
@@ -138,6 +139,7 @@ public class Game : MonoBehaviour
         UI.Instance.HideAll();
         LoadScene("VictoryScene");
         Timer.Instance.PauseTimer();
+        Sound.Instance.PauseInGameMusic();
         Timer.Instance.saveTime();
     }
 
@@ -147,6 +149,7 @@ public class Game : MonoBehaviour
         LoadScene("Intro");
         UI.Instance.HideAll();
         Timer.Instance.PauseTimer();
+        Sound.Instance.PauseInGameMusic();
     }
 
     // go back to the main menu
@@ -155,6 +158,7 @@ public class Game : MonoBehaviour
         LoadScene("Menu");
         UI.Instance.HideAll();
         Timer.Instance.PauseTimer();
+        Sound.Instance.PauseInGameMusic();
     }
 
     public void ResetGame()
@@ -176,5 +180,6 @@ public class Game : MonoBehaviour
         gameState = GameState.PlayingALevel;
         UI.Instance.LaunchLevel(id);
         LoadScene(levelSceneNames[id]);
+        Sound.Instance.PlayInGameMusic();
     }
 }

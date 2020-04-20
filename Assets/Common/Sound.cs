@@ -6,6 +6,8 @@ public class Sound : MonoBehaviour
 {
     public static Sound Instance { get; private set; }
 
+    public AudioSource ingameMusic;
+
     void Awake()
     {
         if (Instance == null) { 
@@ -15,15 +17,13 @@ public class Sound : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void PlayInGameMusic()
     {
-
+        ingameMusic.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PauseInGameMusic()
     {
-        
+        ingameMusic.Pause();
     }
 }
