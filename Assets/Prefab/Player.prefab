@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkingSpeed: 10
-  rotationSpeed: 10
+  rotationOffset: 1
   acceleration: 0.5
   deceleration: 1
 --- !u!58 &3398203977042923982
@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 3398203977433885127}
   - component: {fileID: 3398203977433885126}
   - component: {fileID: 4505976807649536408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Mirror
   m_TagString: Untagged
   m_Icon: {fileID: 0}

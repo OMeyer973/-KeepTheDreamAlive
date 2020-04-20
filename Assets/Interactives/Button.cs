@@ -23,12 +23,6 @@ public class Button : DoorActivator
         // if wrong transporter color : abort
         if (color != TransporterColor.Both && transporter.color != color) return;
 
-        if (buttonType == ButtonType.wihTimer)
-        {
-            ReleaseButtonAfterTimer();
-            return;
-        }
-
         ReleaseButton();
     }
 }

@@ -9,7 +9,7 @@ public enum ButtonType
     persistant,
     wihTimer
 }
-public class DoorActivator : MonoBehaviour
+public abstract class DoorActivator : MonoBehaviour
 {
     // door this button will trigger
     public Door doorToTrigger;
@@ -32,7 +32,7 @@ public class DoorActivator : MonoBehaviour
         // todo graphics
         // todo sound
     }
-    protected void ReleaseButton()
+    protected void ReleaseButtonNow()
     {
         // button allready deactivated
         if (!activated) return;
@@ -45,9 +45,15 @@ public class DoorActivator : MonoBehaviour
         // todo sound
     }
 
-    protected void ReleaseButtonAfterTimer()
+    // release the button now or a
+    protected void ReleaseButton()
     {
-        waitAndReleaseCoroutine = StartCoroutine(ReleaseButtonAfterTime(timer));
+        if (buttonType == ButtonType.wihTimer)
+        {
+            waitAndReleaseCoroutine = StartCoroutine(ReleaseButtonAfterTime(timer));
+        } else {
+            ReleaseButtonNow();
+        }
     }
 
     // when calling this coroutine : plug it into waitAndReleaseCoroutine !!
@@ -56,6 +62,6 @@ public class DoorActivator : MonoBehaviour
     private IEnumerator ReleaseButtonAfterTime(float time)
     {
         yield return new WaitForSeconds(time);
-        ReleaseButton();
+        ReleaseButtonNow();
     }
 }
