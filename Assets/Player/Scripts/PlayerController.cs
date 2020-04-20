@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Game.Instance.gameState != GameState.PlayingALevel) return;
+        if (Game.Instance != null && Game.Instance.gameState != GameState.PlayingALevel) return;
 
         float directionSign = steeringRed ? 1 : - 1;
         Vector3 mirrorDirection = directionSign * (transporterRed.position - transporterBlue.position).normalized;
