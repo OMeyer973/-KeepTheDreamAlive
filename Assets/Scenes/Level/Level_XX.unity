@@ -2778,6 +2778,8 @@ MonoBehaviour:
   doorType: 1
   closedByDefault: 1
   numberOfSignalsToActivate: 2
+  closedDoor: {fileID: 0}
+  openDoor: {fileID: 0}
 --- !u!23 &927480012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3812,6 +3814,16 @@ PrefabInstance:
     - target: {fileID: 1843321229567058344, guid: d6b3c03401a81e24fa3cf407ad005349,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4982187129684777679, guid: d6b3c03401a81e24fa3cf407ad005349,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6711305928761469366, guid: d6b3c03401a81e24fa3cf407ad005349,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

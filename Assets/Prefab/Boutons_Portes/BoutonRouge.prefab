@@ -76,8 +76,8 @@ MonoBehaviour:
   color: 0
   buttonType: 0
   timer: 10
-  disabledGraphic: {fileID: 0}
-  enabledGraphic: {fileID: 0}
+  disabledGraphic: {fileID: 8146310000768604931}
+  enabledGraphic: {fileID: 4800039228538138227}
   invertSignal: 0
 --- !u!1 &4800039228538138227
 GameObject:
