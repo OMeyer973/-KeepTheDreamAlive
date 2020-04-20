@@ -1049,7 +1049,6 @@ GameObject:
   m_Component:
   - component: {fileID: 636574686}
   - component: {fileID: 636574685}
-  - component: {fileID: 636574684}
   - component: {fileID: 636574687}
   m_Layer: 0
   m_Name: Laser
@@ -1058,20 +1057,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &636574684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 636574683}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f347582f1b8b8044ba654db49b2c460, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  angle: 0
-  lr: {fileID: 0}
 --- !u!120 &636574685
 LineRenderer:
   m_ObjectHideFlags: 0
