@@ -931,7 +931,7 @@ Transform:
   - {fileID: 1620923445}
   - {fileID: 1393094533}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &518111993
 PrefabInstance:
@@ -1573,7 +1573,7 @@ PrefabInstance:
     - target: {fileID: 3034787696199548943, guid: 38b507bc2639e6846911b59ef8c91ace,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.867598
+      value: -1.668
       objectReference: {fileID: 0}
     - target: {fileID: 3034787696199548943, guid: 38b507bc2639e6846911b59ef8c91ace,
         type: 3}
@@ -1635,10 +1635,35 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.66043
       objectReference: {fileID: 0}
+    - target: {fileID: 5156093860583796840, guid: 38b507bc2639e6846911b59ef8c91ace,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5156093860583796840, guid: 38b507bc2639e6846911b59ef8c91ace,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5720249934723307890, guid: 38b507bc2639e6846911b59ef8c91ace,
         type: 3}
       propertyPath: doorType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843980816374142727, guid: 38b507bc2639e6846911b59ef8c91ace,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843980816374142727, guid: 38b507bc2639e6846911b59ef8c91ace,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5843980816374142727, guid: 38b507bc2639e6846911b59ef8c91ace,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.444
       objectReference: {fileID: 0}
     - target: {fileID: 6407635572906305886, guid: 38b507bc2639e6846911b59ef8c91ace,
         type: 3}
@@ -4754,6 +4779,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PorteBleu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944112305839849285, guid: 22a135bbbec0ee748b325b8576ef7c0f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944112305839849285, guid: 22a135bbbec0ee748b325b8576ef7c0f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944112305839849285, guid: 22a135bbbec0ee748b325b8576ef7c0f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.456
+      objectReference: {fileID: 0}
+    - target: {fileID: 7944112305839849285, guid: 22a135bbbec0ee748b325b8576ef7c0f,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22a135bbbec0ee748b325b8576ef7c0f, type: 3}
