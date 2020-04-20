@@ -942,12 +942,12 @@ PrefabInstance:
     - target: {fileID: 1968556197046328459, guid: 7b2fc014e6e9fe045a4bd8cc673493a4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.5006132
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1968556197046328459, guid: 7b2fc014e6e9fe045a4bd8cc673493a4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.73611027
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1968556197046328459, guid: 7b2fc014e6e9fe045a4bd8cc673493a4,
         type: 3}
@@ -988,6 +988,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968556197046328459, guid: 7b2fc014e6e9fe045a4bd8cc673493a4,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968556197046328459, guid: 7b2fc014e6e9fe045a4bd8cc673493a4,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1968556197046328460, guid: 7b2fc014e6e9fe045a4bd8cc673493a4,
         type: 3}
@@ -1258,7 +1268,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525251320}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1829,7 +1839,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.9103774, b: 0.9103774, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
