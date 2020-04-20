@@ -14,11 +14,18 @@ public class SelfWritingText : MonoBehaviour
     private Text textField;
     private string text;
     private float timePause = .015f;
-    public void TypeText(string message, float speed = .02f)
+    public void TypeText(string message, float speed = .01f)
     {
         StopCoroutine("TypeTextCoroutine");
         textField = GetComponent<Text>();
         textField.text = "";
+
+        if (speed <= 0)
+        {
+            textField.text = message;
+            return;
+        }
+
         text = message;
         timePause = speed;
         StartCoroutine("TypeTextCoroutine");

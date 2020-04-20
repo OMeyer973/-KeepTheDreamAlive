@@ -13,6 +13,9 @@ public class MagicMirror : MonoBehaviour
     void Start()
     {
         currHitPoints = Game.Instance.mirrorMaxHp;
+        Debug.Log("Game.Instance.mirrorMaxHp " + Game.Instance.mirrorMaxHp);
+        Debug.Log("currHitPoints " + currHitPoints);
+
     }
 
     private void TakeDamage()

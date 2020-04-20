@@ -13,6 +13,7 @@ public class Hole : MonoBehaviour
             Debug.Log("something weird felt into a hole");
             return;
         }
+        transporter.gameObject.SetActive(false);
         Game.Instance.LoseLevel(LoseCondition.FellInHole);
     }
 }
