@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/Scenes/preload.unity
     guid: 98e582dd7ef1ba14496646748a3d5c34
   - enabled: 1
-    path: Assets/Scenes/Intro/Intro.unity
+    path: Assets/Scenes/Intro-Outro/Intro.unity
     guid: 90fc519ace3362b4c8ec71a60cbbf1d7
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: cbfc967795cc247448c5a4a46535356d
   - enabled: 1
-    path: Assets/Scenes/VictoryScene.unity
+    path: Assets/Scenes/Intro-Outro/VictoryScene.unity
     guid: a027012907803a145bb87e4875609b25
   - enabled: 1
     path: Assets/Scenes/Level/Level_0.unity
