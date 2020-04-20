@@ -791,7 +791,7 @@ GameObject:
   - component: {fileID: 452536419}
   - component: {fileID: 452536420}
   m_Layer: 0
-  m_Name: GameManage10
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -827,7 +827,7 @@ MonoBehaviour:
   timeBetweenLevelLostAndReset: 3
   gameState: 0
   levelSceneNames:
-  - Level_0
+  - DevSandBox
   - Level_1
   - Level_2
   - Level_3
@@ -839,7 +839,7 @@ MonoBehaviour:
   - Level_9
   - Level_10
   - Level_11
-  - Level_96
+  - Level_10
 --- !u!1 &468084096
 GameObject:
   m_ObjectHideFlags: 0

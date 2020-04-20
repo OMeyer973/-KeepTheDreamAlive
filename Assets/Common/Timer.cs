@@ -87,9 +87,9 @@ public class Timer : MonoBehaviour
         string timeString;
         if (h > .1)
         {
-            timeString = h.ToString("00") + ":" + m.ToString("00") + ":" + s.ToString("00") + ":" + ds.ToString("N2").Remove(0, 2);
+            timeString = h.ToString("00") + ":" + m.ToString("00") + ":" + s.ToString("00") + ":" + (ds.ToString("N2")).Remove(0, 2);
         } else {
-            timeString = m.ToString("00") + ":" + s.ToString("00") + ":" + ds.ToString("N2").Remove(0, 2);
+            timeString = m.ToString("00") + ":" + s.ToString("00") + ":" + (ds.ToString("N2")).Remove(0, 2);
         }
         return timeString;
     }
