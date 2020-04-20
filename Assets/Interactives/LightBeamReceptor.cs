@@ -17,6 +17,7 @@ public class LightBeamReceptor : DoorActivator
     // Start is called before the first frame update
     void Start()
     {
+        base.Start();
         sources = new List<LightBeamSource>();
     }
 

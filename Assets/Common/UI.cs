@@ -133,7 +133,7 @@ public class UI : MonoBehaviour
         switch(loseCondition)
         {
             case LoseCondition.FellInHole:
-                MirrorTextWriter.TypeText("Get out of that hole...", 0);
+                MirrorTextWriter.TypeText("You fell into a hole", 0);
                 break;
             case LoseCondition.HitWall:
                 MirrorTextWriter.TypeText("7 years of bad luck", 0);

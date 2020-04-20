@@ -17,10 +17,23 @@ public abstract class DoorActivator : MonoBehaviour
     public ButtonType buttonType;
     public float timer = 10f;
 
+    [Header("gameobjects a activer pour afficher l'état enclenché ou non du bouton")]
+
+    [Header("! doit être différent du gameobject qui porte ce script ! (un de ses enfant par exemple)")]
+    
+    public GameObject disabledGraphic;
+    public GameObject enabledGraphic;
+
     public bool invertSignal;
 
     protected bool activated = false;
     private Coroutine waitAndReleaseCoroutine;
+
+    protected void Start()
+    {
+        enabledGraphic.SetActive(false);
+        disabledGraphic.SetActive(true);
+    }
     protected void PressButton()
     {
         // button allready activated
@@ -32,6 +45,9 @@ public abstract class DoorActivator : MonoBehaviour
             StopCoroutine(waitAndReleaseCoroutine);
         }
         Debug.Log("button / light receiver activated !");
+
+        enabledGraphic.SetActive(true);
+        disabledGraphic.SetActive(false);
         // todo graphics
         // todo sound
     }
@@ -44,6 +60,10 @@ public abstract class DoorActivator : MonoBehaviour
         activated = false;
         doorToTrigger.toggleDoorBehavior(invertSignal);
         Debug.Log("button / light receiver deactivated !");
+
+        enabledGraphic.SetActive(false);
+        disabledGraphic.SetActive(true);
+
         // todo graphics
         // todo sound
     }
