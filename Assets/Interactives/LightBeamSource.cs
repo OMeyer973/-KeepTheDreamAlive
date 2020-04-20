@@ -26,10 +26,10 @@ public class LightBeamSource : MonoBehaviour
         int nBounces = lightRay.endPoints.Count;
 
         lr.positionCount = nBounces + 1;
-        lr.SetPosition(0, transform.position);
+        lr.SetPosition(0, transform.position + new Vector3(0,0,-1f));
         for (int i = 0; i < nBounces; i++)
         {
-            lr.SetPosition(i + 1, lightRay.endPoints[i]);
+            lr.SetPosition(i + 1, new Vector3(lightRay.endPoints[i].x, lightRay.endPoints[i].y, -1));
         }
 
         destinations.Clear();

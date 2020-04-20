@@ -60,7 +60,7 @@ public class LightBeam
 
             GameObject hitObject = hit.collider.gameObject;
             if (!lightRay.touchedObjects.Contains(hitObject))
-            {
+            { 
                 lightRay.touchedObjects.Add(hitObject);
             }
 
