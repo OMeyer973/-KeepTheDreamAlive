@@ -21,6 +21,10 @@ public class Sound : MonoBehaviour
     {
         ingameMusic.Play();
     }
+    public void UnPauseInGameMusic()
+    {
+        ingameMusic.Play();
+    }
 
     public void PauseInGameMusic()
     {
