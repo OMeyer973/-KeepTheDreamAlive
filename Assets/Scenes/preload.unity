@@ -2642,17 +2642,15 @@ MonoBehaviour:
   PauseScreen: {fileID: 343883620}
   LevelVictoryScreen: {fileID: 189448745}
   levelAdvices:
-  - Welcome to Your new magic mirror delivery job young lads. Your task is to bring
-    me up this tower to the princess who ordered me. move with the arrow keys.
-  - 'Here''s a tip : press the left CTRL key to switch wo is in command. And keep
-    me off the walls or I''l get a scratch !'
+  - 
+  - 'So you''re the guys delivering me to the Princess Huh ?  '
   - Hey you probably don't want to fall into these holes right here
   - If you do a bad job, the amazon drone will deliver me in your stead...
-  - Ez...
-  - "I\u2019d like to see the castles blueprint. "
   - The owner must love drawers...
+  - "I\u2019d like to see the castles blueprint. "
+  - 'Oh a puzzle with light? Fancy! '
   - If you do a bad job, the amazon drone will deliver me in your stead...
-  - 'On the road again ... '
+  - ' Buttons, buttons buttons...'
   - If you do a bad job, the amazon drone will deliver me in your stead...
   - You know breaking a mirror bring bad luck? You better reflect on it.
   - '*cough* Hmmm i might be sick...'
@@ -2662,7 +2660,7 @@ MonoBehaviour:
   - The artist who made these paintings had no intention of reinventing himself.
   - "Oh boy, what a complicated room. The architects were probably sadistic people
     wouldn\u2019t you say?"
-  - Come on ! The last one !
+  - If this was a videogame, this room would be the final boss !
 --- !u!1 &1663218278
 GameObject:
   m_ObjectHideFlags: 0
