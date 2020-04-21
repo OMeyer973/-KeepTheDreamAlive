@@ -84,6 +84,7 @@ public class Game : MonoBehaviour
         prevGameState = gameState;
         gameState = GameState.InAMenu;
         Timer.Instance.PauseTimer();
+        Sound.Instance.PauseInGameMusic();
         //todo stop time
     }
 
@@ -93,6 +94,7 @@ public class Game : MonoBehaviour
         gameState = prevGameState;
         Timer.Instance.UnpauseTimer();
         //todo stop time
+        Sound.Instance.UnPauseInGameMusic();
     }
 
     public void LoseLevel(LoseCondition loseCondition)
@@ -119,7 +121,6 @@ public class Game : MonoBehaviour
         gameState = GameState.InAMenu;
         UI.Instance.ShowLevelVictoryScreen();
         Timer.Instance.PauseTimer();
-        Sound.Instance.PauseInGameMusic();
     }
 
     // load the current level (ie the first level at the first launch)
@@ -189,6 +190,6 @@ public class Game : MonoBehaviour
         gameState = GameState.PlayingALevel;
         UI.Instance.LaunchLevel(id);
         LoadScene(levelSceneNames[id]);
-        Sound.Instance.PlayInGameMusic();
+        Sound.Instance.UnPauseInGameMusic();
     }
 }
