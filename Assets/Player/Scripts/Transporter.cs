@@ -10,12 +10,13 @@ public class Transporter : MonoBehaviour
 {
     public TransporterColor color;
     private GameObject transporterUI;
-    private AudioSource holeFallSFX;
+    public AudioSource holeFallSFX;
 
     private void Start()
     {
         transporterUI = transform.GetChild(0).gameObject;
         transporterUI.SetActive(false);
+        holeFallSFX = GetComponent<AudioSource>();
     }
     public void BeginSteering()
     {
@@ -29,7 +30,10 @@ public class Transporter : MonoBehaviour
 
     public void FallInHole()
     {
-        holeFallSFX.PlayOneShot(holeFallSFX.clip);
+        if (holeFallSFX != null)
+        {
+            holeFallSFX.PlayOneShot(holeFallSFX.clip);
+        }
         Game.Instance.LoseLevel(LoseCondition.FellInHole);
         gameObject.SetActive(false);
     }
